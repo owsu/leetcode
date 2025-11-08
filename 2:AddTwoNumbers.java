@@ -1,5 +1,13 @@
-// Github Medium
+/* Github Medium Problem
+Basically what we are doing is creating a Listnode, which we will use as an output, then looping through the two given listnodes whenever possible.
+If there is a value then we use the value of the listnode, if not then we pretend that value is 0. Then we add the two values + the carry
+since numbers > 9 will result in a carry. To calculate the carry we just say that the value is = to the value divided by 10 and java
+always rounds down anyways. And the value is the value without the 10s place which is just mod 10. Then we assign that value to current.next
+And  we iterate by setting current to current.next and l1 & l2 to l1/l2.next. Since we are creating our own node and we are looping through
+the two nodes our time and space complexity will come out to O(N + M) size, it mainly depending on whatever is bigger, N or M.
 
+
+*/
 /**
  * Definition for singly-linked list.
  * public class ListNode {
