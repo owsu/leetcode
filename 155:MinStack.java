@@ -1,5 +1,15 @@
 // Leetcode Medium
 
+/* This is the exact same as a typical academic CS
+problem. The only difference is that we have two stacks within the class
+which allows us to have a gitmin, it works by making sure that everytime we push a value,
+if the value is not bigger than the current one then it  gets pushed, otherwise we push
+a duplicate of a min. So a min stack would look like this
+array [5,3,4,7,2] in this class would be:
+stack variable (bottom to top) [5, 3, 4, 7, 2]
+minStack variable (bottom to top) [5, 3, 3, 3, 2]
+*/
+
 class MinStack {
     Deque<Integer> stack;
     Deque<Integer> minStack;
