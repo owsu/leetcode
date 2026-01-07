@@ -18,7 +18,7 @@ This is the idea:
 3. Create the ListNode to output
 4. Loop through the prio queue, get the head (smallest value) and set our "current" (the tail) to smallest, and iterate
 5. Update the queue since the prio queue only sorts by the head of the linked list, so we offer up everything but the head this time
-6. Output the dummy
+6. Output the dummy node
 
 In theory, the prio queue is taking on o(k) space which is # nodes
 In theory, looping through the prio queue is o(n) but poll is log(k) just because of how heaps work. so overall it is O(nlog(k))
