@@ -4,12 +4,12 @@ class Solution {
         Map<Integer, Integer> hm = new HashMap<>();
         int[] output = new int[nums1.length];
 
-        for (int i = 0; i < nums2.length; i++) {
-            while (!myStack.isEmpty() && myStack.peek() < nums2[i]) {
-                hm.put(myStack.pop(), nums2[i]);
+        for (int num : nums2) {
+            while (!myStack.isEmpty() && myStack.peek() < num) {
+                hm.put(myStack.pop(), num);
             }
 
-            myStack.push(nums2[i]);
+            myStack.push(num);
         }
 
         for (int i = 0; i < nums1.length; i++) {
