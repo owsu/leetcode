@@ -1,26 +1,27 @@
 class Solution {
     public boolean searchMatrix(int[][] matrix, int target) {
 
-        int left = 0;
-        int row = 0;
-        while (row < matrix.length && matrix[row][matrix[row].length - 1] < target) { // insta skip invalid rows
-            row++;
-        }
+        int m = matrix.length;
+        int n = matrix[0].length;
 
-        if (row == matrix.length) {return false;} // target just too big
-        int right = matrix[row].length - 1;
+        int left = 0;
+        int right = (m * n) - 1;
 
         while (left <= right) {
             int mid = left + (right - left)/2;
-            if (matrix[row][mid] < target) {
+
+            int row = mid / n;
+            int col = mid % n;
+            int value = matrix[row][col];
+
+            if (value < target) {
                 left = mid + 1;
-            } else if (matrix[row][mid] > target) {
+            } else if (value > target) {
                 right = mid - 1;
             } else {
                 return true;
             }
         }
-
 
         return false;
     }
