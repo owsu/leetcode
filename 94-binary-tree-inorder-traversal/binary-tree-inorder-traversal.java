@@ -14,7 +14,7 @@
  * }
  */
 class Solution {
-    public void searchTree(TreeNode node, List list) {
+    public void searchTree(TreeNode node, List<Integer> list) {
         if (node == null) {return;}
         searchTree(node.left, list);
         list.add(node.val);
